@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+{%load static%}
+<title>
+    {%block title%}
+        Teacher' Page
+    {%endblock%}
+</title>
+        {%block content%}
+            {%if test != False%}
+            {% for user in users%}
+                <h1>He is name {{user.name}}</h1>
+                <h1>He is  {{user.age}} years old</h1>
+                <h1>Conact: {{user.email}}</h1>
+                <img src="{{user.photo.url}}" alt="{{user.name}}">
+                {% endfor%}
+            {%endif%}
+        {%endblock content%} 
