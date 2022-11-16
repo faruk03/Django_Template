@@ -2,7 +2,7 @@
 {%load static%}
 <title>
     {%block title%}
-        Teacher' Page
+        Teacher's Page
     {%endblock%}
 </title>
         {%block content%}
@@ -11,7 +11,7 @@
                 <h1>He is name {{user.name}}</h1>
                 <h1>He is  {{user.age}} years old</h1>
                 <h1>Conact: {{user.email}}</h1>
-                <img src="{{user.photo.url}}" alt="{{user.name}}">
+                {% comment %} <img src="{{user.photo.url}}" alt="{{user.name}}"> {% endcomment %}
                 {% endfor%}
             {%endif%}
         {%endblock content%} 
